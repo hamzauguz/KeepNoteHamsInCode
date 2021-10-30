@@ -76,24 +76,9 @@ export default function Task({ navigation }) {
                 }}
             />
 
+
             <View style={styles.container}>
-                <View style={{
-                    backgroundColor: "#F92e6a",
-                    borderRadius: 10,
-                    width: "80%",
-                    left: 39,
-                    height: 35,
-                    padding: 2,
-                    top: 130,
-                }}>
-                    <Text style={{
-                        fontSize: 20,
-                        textAlign: "center",
-                        color: "#ffffff"
-                    }}>
-                        {auth.currentUser?.email}
-                    </Text>
-                </View>
+
                 <TouchableOpacity style={styles.buttonNewTask}
                     onPress={() => navigation.navigate("NewTask")}
                 >
@@ -103,6 +88,25 @@ export default function Task({ navigation }) {
                     <Ionicons name="log-out" size={32} color="white" />
                 </TouchableOpacity>
             </View>
+            <View style={{
+                backgroundColor: "#F92e6a",
+                borderRadius: 10,
+                width: "80%",
+                right: -40,
+                height: 35,
+                padding: -20,
+                top: -130,
+            }}>
+                <Text style={{
+                    fontSize: 20,
+                    textAlign: "center",
+                    color: "#ffffff",
+                    top: 4
+                }}>
+                    {auth.currentUser?.email}
+                </Text>
+            </View>
+
         </View>
     )
 }
